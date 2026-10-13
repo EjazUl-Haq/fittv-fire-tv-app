@@ -3,45 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FitTV - Smart Home Fitness</title>
+    <title>FitTV Dashboard</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="tv-container">
-      <!-- Header Section -->
-      <header class="tv-header">
+    <div class="dashboard-container">
+      <header class="header">
         <h1>FitTV Dashboard</h1>
         <p>Your Daily Living Room Workout Companion</p>
       </header>
 
-      <!-- Main Categories -->
       <section class="category-section">
-        <h2>Select Workout Category</h2>
-        <div class="card-grid">
-          <div class="card active-card" tabindex="0">
+        <h2 class="section-title">Select Workout Category</h2>
+        <div class="cards-grid">
+          <div class="card active navigable" tabindex="0" data-time="900">
             <h3>Cardio Blast</h3>
             <p>15 Mins • High Energy</p>
           </div>
-          <div class="card" tabindex="0">
+          <div class="card navigable" tabindex="0" data-time="1200">
             <h3>Yoga & Stretch</h3>
             <p>20 Mins • Relaxation</p>
           </div>
-          <div class="card" tabindex="0">
+          <div class="card navigable" tabindex="0" data-time="1800">
             <h3>Strength Training</h3>
             <p>30 Mins • Core & Muscle</p>
           </div>
         </div>
       </section>
 
-      <!-- Interactive Workout Timer Section -->
       <section class="timer-section">
-        <h2>Quick Workout Timer</h2>
-        <div class="timer-display">
-          <span id="minutes">01</span>:<span id="seconds">30</span>
-        </div>
+        <h2 class="section-title">Quick Workout Timer</h2>
+        <div class="timer-display" id="timer">15:00</div>
+        <div class="status-message" id="statusMessage">Ready to start!</div>
         <div class="controls">
-          <button id="startBtn" class="tv-btn">Start Workout</button>
-          <button id="resetBtn" class="tv-btn secondary">Reset</button>
+          <button id="startBtn" class="btn btn-primary navigable" tabindex="0">
+            Start Workout
+          </button>
+          <button
+            id="resetBtn"
+            class="btn btn-secondary navigable"
+            tabindex="0"
+          >
+            Reset
+          </button>
         </div>
       </section>
     </div>
